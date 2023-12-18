@@ -32,7 +32,7 @@ app.post("/login", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }finally{
-    connection.connect();
+    mysqlConnection.connect();
   }
 });
 
@@ -90,7 +90,7 @@ app.post("/register", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }finally{
-    connection.connect();
+    mysqlConnection.connect();
   }
 });
 
@@ -168,7 +168,7 @@ app.post("/userPlan", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }finally{
-    connection.connect();
+    mysqlConnection.connect();
   }
 });
 
@@ -198,7 +198,7 @@ app.post("/getUserPlan", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }finally{
-    connection.connect();
+    mysqlConnection.connect();
   }
 });
 
@@ -242,7 +242,7 @@ app.post('/checkAndDeleteUserPlan', async (req, res) => {
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
     }finally{
-        connection.connect();
+        mysqlConnection.connect();
       }
   });
 
